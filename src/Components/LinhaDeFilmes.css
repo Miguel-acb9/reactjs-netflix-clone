@@ -1,0 +1,66 @@
+.linhaFilmes {
+    margin-bottom: 30px;
+}
+
+.linhaFilmes h2 {
+    margin: 0px 0px 0px 30px;
+}
+
+.linhaFilmes-areaLista {
+    overflow-x: hidden;
+    padding-left: 30px;
+}
+
+.linhaFilmes-lista {
+    transition: all ease 0.5s;
+}
+
+.linhaFilmes-item {
+    width: 150px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.linhaFilmes-item img {
+    width: 100%;
+    transform: scale(0.9);
+    transition: all ease 0.3s;
+}
+
+.linhaFilmes-item img:hover {
+    width: 100%;
+    transform: scale(1);
+}
+
+.linhaFilmes-esquerda, .linhaFilmes-direita {
+    opacity: 0;
+    z-index: 99;
+    width: 40px;
+    height: 225px;
+    display: flex;
+    cursor: pointer;
+    overflow: hidden;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    transition: all ease 0.5s;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.linhaFilmes:hover .linhaFilmes-direita,
+.linhaFilmes:hover .linhaFilmes-esquerda {
+    opacity: 1;
+}
+
+.linhaFilmes-esquerda {
+    left: 0;
+}
+.linhaFilmes-direita {
+    right: 0;
+}
+
+@media (max-width:760px) {
+    .linhaFilmes-direita, .linhaFilmes-esquerda {
+        opacity: 1;
+    }
+}

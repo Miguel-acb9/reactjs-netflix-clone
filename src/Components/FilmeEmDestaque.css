@@ -1,0 +1,106 @@
+.emDestaque {
+    height: 100vh;
+}
+
+.emDestaque-vertical {
+    width: inherit;
+    height: inherit;
+    background: linear-gradient(to top, #111 10%, transparent 90%);
+}
+
+.emDestaque-horizontal {
+    display: flex;
+    width: inherit;
+    height: inherit;
+    padding-top: 70px;
+    padding-left: 30px;
+    padding-bottom: 150px;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(to right, #111 30%, transparent 70%);
+}
+
+.emDestaque-nome {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.emDestaque-info {
+    font-size: 18px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.emDestaque-pontos {
+    color: #46d369;
+}
+
+.emDestaque-pontos, .emDestaque-lancamento, .emDestaque-temporadas {
+    margin-right: 15px;
+    display: inline-block;
+}
+
+.emDestaque-descricao {
+    color: #999;
+    max-width: 40%;
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+.emDestaque-butoes {
+    margin-top: 15px;
+}
+
+.emDestaque-btnAssistir {
+    color: #000;
+    background-color: #fff;
+}
+
+.emDestaque-btnAdicionar {
+    color: #fff;
+    background-color: #333;
+}
+
+.emDestaque-btnAssistir, .emDestaque-btnAdicionar {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 12px 25px;
+    border-radius: 5px;
+    margin-right: 10px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.emDestaque-btnAssistir:hover, .emDestaque-btnAdicionar:hover {
+    opacity: 0.6;
+    transition: all ease 0.3s;
+}
+
+.emDestaque-genero {
+    color: #999;
+    font-size: 15px;
+    margin-top: 18px;
+}
+
+@media (max-width: 760px) {
+    .emDestaque {
+        height: 90vh;
+    }
+    .emDestaque-nome {
+        font-size: 40px;
+    }
+    .emDestaque-info {
+        font-size: 16px;
+    }
+    .emDestaque-descricao {
+        font-size: 14px;
+        max-width: 100%;
+        margin-right: 30px;
+    }
+    .emDestaque-btnAssistir, .emDestaque-btnAdicionar {
+        font-size: 16px;
+    }
+    .emDestaque-genero {
+        font-size: 16px;
+    }
+}
