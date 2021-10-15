@@ -1,3 +1,4 @@
+// Importação de Módulos e Bibliotecas
 import "./LinhaDeFilmes.css";
 import React, { useState } from "react";
 import { GoChevronLeft } from "react-icons/go";
@@ -10,10 +11,7 @@ export default ({ titulo, itens }) => {
     const lidarSetaDireita = () => {
         let tam_lista = itens.results.length * 150;
         let x = rolarX - Math.round(window.innerWidth / 2);
-        
-        if(window.innerWidth - tam_lista > x) {
-            x = (window.innerWidth - tam_lista) - 60
-        }
+        if(window.innerWidth - tam_lista > x) { x = (window.innerWidth - tam_lista) - 60 }
         setRolarX(x);
     }
 
@@ -26,15 +24,12 @@ export default ({ titulo, itens }) => {
     return [
         <div className="linhaFilmes">
             <h2>{ titulo }</h2>
-            
             <div className="linhaFilmes-esquerda" onClick={lidarSetaEsquerda}>
                 <GoChevronLeft style={{fontSize: 50}}/>
             </div>
-
             <div className="linhaFilmes-direita" onClick={lidarSetaDireita}>
                 <GoChevronRight style={{fontSize: 50}}/>
             </div>
-            
             <div className="linhaFilmes-areaLista">
                 <div className="linhaFilmes-lista" style={{
                     marginLeft: rolarX,

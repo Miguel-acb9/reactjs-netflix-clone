@@ -1,6 +1,6 @@
+// Importação de Módulos e Bibliotecas
 import React from "react";
 import "./FilmeEmDestaque.css";
-
 
 export default ({ item }) => {
     // Declaração de Variáveis
@@ -21,24 +21,19 @@ export default ({ item }) => {
             <div className="emDestaque-vertical">
                 <div className="emDestaque-horizontal">
                     <div className="emDestaque-nome">{ item.original_name }</div>
-                    
                     <div className="emDestaque-info">
                         <div className="emDestaque-pontos">{ item.vote_average } pontos</div>
                         <div className="emDestaque-lancamento">{ data_lancamento.getFullYear() }</div>
                         <div className="emDestaque-temporadas">{ item.number_of_seasons } temporada{item.number_of_seasons !== 1 ? "s" : ""}</div>
                     </div>
-
                     <div className="emDestaque-descricao">{ descricao }</div>
-                    
                     <div className="emDestaque-butoes">
                         <a href={`/assistir/${item.id}`} className="emDestaque-btnAssistir">▶ Assistir</a>
                         <a href={`/lista/adicionar/${item.id}`} className="emDestaque-btnAdicionar">+ Minha Lista</a>
                     </div>
-                    
                     <div className="emDestaque-genero"><strong>Gêneros: </strong>{ listaGeneros.join(", ") }</div>
                 </div>
             </div>
         </section>
     );
 }
-

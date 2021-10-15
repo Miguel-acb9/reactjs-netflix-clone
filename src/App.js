@@ -16,7 +16,6 @@ export default () => {
         const carregarTudo = async () => {
             // Pegar Lista Total de Filmes
             let lista = await theMovieDB.getListaHome();
-            console.log("LISTA DE FILMES\n"+lista);
             setListaFilmes(lista);
 
             // Pegar Filme em Destaque
@@ -24,7 +23,6 @@ export default () => {
             let escolhaAleatoria = Math.floor(Math.random() * (originals[0].items.results.length - 1));
             let emDestaque = originals[0].items.results[escolhaAleatoria];
             let infoEmDestaque = await theMovieDB.getInfoFilme(emDestaque.id, "tv")
-            console.log("FILME EM DESTAQUE\n"+infoEmDestaque);
             setDadosFilmeDestaque(infoEmDestaque);
         }
         carregarTudo();
@@ -59,8 +57,7 @@ export default () => {
                 Dados pegos do site themoviedb.org
             </footer>
 
-            {
-                listaFilmes.length <= 0 &&
+            {listaFilmes.length <= 0 &&
                 <div className="carregamento">
                     <img src="https://1.bp.blogspot.com/-B9juta27w6o/Xzk4GGrOziI/AAAAAAABtpE/0OMhU_0hPTY7PhayDfL3eJ5mIc2csWWWwCLcBGAsYHQ/s1600/Netflix_LoadTime.gif" alt="Carregando"/>
                 </div>
