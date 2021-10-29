@@ -23,11 +23,23 @@ Este projeto é um clone simplificado do front-end do Netflix. Foi criado com Re
     - [JSON Viewer](http://jsonviewer.stack.hu/)
 
 
-### 📋 Dependências
-1. Inicialização das dependencias e configurações.
+### 📋 Execução
+1. Clone o projeto, caso ainda não tenha clonado:
+    ```powershell
+    git clone https://github.com/Miguel-acb9/reactjs-netflix-clone.git
     ```
-    yarn 
-    ``` 
+2. Acesse a pasta <code>reactjs-netflix-clone</code>
+    ```powershell
+    cd ./reactjs-netflix-clone/
+    ```
+3. Dentro da pasta <code>reactjs-netflix-clone</code>, execute para instalar as dependências:
+    ```powershell
+    yarn
+    ```
+4. Em seguida, execute o seguinte comando para rodar a aplicação:
+    ```powershell
+    yarn start
+    ```
 
 ## 📦 Desenvolvimento
 
